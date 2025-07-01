@@ -2,35 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hotel Voucher Generator</title>
+  <title>Flymaxt Hotel Voucher Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Flymaxt Travels Pvt Ltd</h1>
     <form id="voucherForm">
-      <div class="input-group"><label>Guest Name:</label><input type="text" id="guestName" required></div>
-      <div class="input-group"><label>Email:</label><input type="text" id="guestEmail" required></div>
-      <div class="input-group"><label>Contact Number:</label><input type="text" id="guestPhone" required></div>
-      <div class="input-group"><label>Booking ID:</label><input type="text" id="bookingId" required></div>
-      <div class="input-group"><label>Hotel Name:</label><input type="text" id="hotelName" required></div>
-      <div class="input-group"><label>Check-In Date:</label><input type="date" id="checkIn" required></div>
-      <div class="input-group"><label>Check-Out Date:</label><input type="date" id="checkOut" required></div>
-      <div class="input-group"><label>Room Type:</label><input type="text" id="roomType" required></div>
-      <div class="input-group"><label>Upload Hotel Image:</label><input type="file" id="hotelImage" accept="image/*"></div>
+      <div class="form-row"><label>Guest Name:</label><input type="text" id="guestName" required></div>
+      <div class="form-row"><label>Email:</label><input type="email" id="guestEmail" required></div>
+      <div class="form-row"><label>Contact Number:</label><input type="text" id="guestPhone" required></div>
+      <div class="form-row"><label>Booking ID:</label><input type="text" id="bookingId" required></div>
+      <div class="form-row"><label>Hotel Name:</label><input type="text" id="hotelName" required></div>
+      <div class="form-row"><label>Check-In Date:</label><input type="date" id="checkIn" required></div>
+      <div class="form-row"><label>Check-Out Date:</label><input type="date" id="checkOut" required></div>
+      <div class="form-row"><label>Room Type:</label><input type="text" id="roomType" required></div>
+      <div class="form-row"><label>Meal Plan:</label>
+        <select id="mealPlan" required>
+          <option value="Room Only">Room Only</option>
+          <option value="Breakfast Included">Breakfast Included</option>
+          <option value="Half Board">Half Board</option>
+          <option value="Full Board">Full Board</option>
+          <option value="All Inclusive">All Inclusive</option>
+        </select>
+      </div>
+      <div class="form-row"><label>Upload Hotel Image:</label><input type="file" id="hotelImage" accept="image/*"></div>
       <button type="submit">Generate Voucher</button>
     </form>
 
     <div id="voucher" class="voucher" style="display:none;">
       <h2>Hotel Stay Voucher</h2>
-      <p><strong>Guest Name:</strong> <span id="v_guestName"></span></p>
-      <p><strong>Email:</strong> <span id="v_guestEmail"></span></p>
-      <p><strong>Contact Number:</strong> <span id="v_guestPhone"></span></p>
       <p><strong>Booking ID:</strong> <span id="v_bookingId"></span></p>
-      <p><strong>Hotel Name:</strong> <span id="v_hotelName"></span></p>
+      <p><strong>Guest:</strong> <span id="v_guestName"></span></p>
+      <p><strong>Email:</strong> <span id="v_guestEmail"></span></p>
+      <p><strong>Contact:</strong> <span id="v_guestPhone"></span></p>
+      <p><strong>Hotel:</strong> <span id="v_hotelName"></span></p>
+      <p><strong>Room Type:</strong> <span id="v_roomType"></span></p>
+      <p><strong>Meal Plan:</strong> <span id="v_mealPlan"></span></p>
       <p><strong>Check-In:</strong> <span id="v_checkIn"></span></p>
       <p><strong>Check-Out:</strong> <span id="v_checkOut"></span></p>
-      <p><strong>Room Type:</strong> <span id="v_roomType"></span></p>
+      <p><strong>Total Nights:</strong> <span id="v_nights"></span></p>
       <img id="v_hotelImage" alt="Hotel Image" style="max-width:100%; margin-top:20px;">
       <button onclick="downloadPDF()">Download PDF</button>
     </div>
