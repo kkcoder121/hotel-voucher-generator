@@ -2,38 +2,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hotel Voucher Generator</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Hotel Voucher - Flymaxt</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <form id="voucherForm">
-    <div class="form-row"><label>Guest Name:</label><input type="text" id="guestName" required></div>
-    <div class="form-row"><label>Booking ID:</label><input type="text" id="bookingId" required></div>
-    <div class="form-row"><label>Hotel Name:</label><input type="text" id="hotelName" required></div>
-    <div class="form-row"><label>Hotel Address:</label><input type="text" id="hotelAddress" required></div>
-    <div class="form-row"><label>Hotel Contact:</label><input type="text" id="hotelContact" required></div>
-    <div class="form-row"><label>Hotel Email:</label><input type="email" id="hotelEmail" required></div>
-    <div class="form-row"><label>Room Type:</label><input type="text" id="roomType" required></div>
-    <div class="form-row"><label>Occupancy:</label><input type="text" id="occupancy" required></div>
-    <div class="form-row"><label>Meal Plan:</label><input type="text" id="mealPlan" required></div>
-    <div class="form-row"><label>Check In:</label><input type="date" id="checkIn" required></div>
-    <div class="form-row"><label>Check Out:</label><input type="date" id="checkOut" required></div>
-    <div class="form-row"><label>Upload Hotel Image:</label><input type="file" id="hotelImage"></div>
-    <div class="form-row">
-      <label>Voucher Style:</label>
-      <select id="voucherStyle">
-        <option value="flymaxt">Flymaxt</option>
-        <option value="agoda">Agoda</option>
+    <h2>Hotel Voucher Generator</h2>
+    <label>Guest Name: <input type="text" id="guestName" required></label><br>
+    <label>Booking ID: <input type="text" id="bookingId" required></label><br>
+    <label>Hotel Name: <input type="text" id="hotelName" required></label><br>
+    <label>Hotel Address: <input type="text" id="hotelAddress" required></label><br>
+    <label>Hotel Contact: <input type="text" id="hotelContact" required></label><br>
+    <label>Hotel Email: <input type="email" id="hotelEmail" required></label><br>
+    <label>Check-In Date: <input type="date" id="checkIn" required></label><br>
+    <label>Check-Out Date: <input type="date" id="checkOut" required></label><br>
+    <label>Room Type: <input type="text" id="roomType" required></label><br>
+    <label>Occupancy: <input type="text" id="occupancy" required></label><br>
+    <label>Meal Plan:
+      <select id="mealPlan">
+        <option value="Room Only">Room Only</option>
+        <option value="Breakfast Included">Breakfast Included</option>
+        <option value="Half Board">Half Board</option>
+        <option value="Full Board">Full Board</option>
+        <option value="All Inclusive">All Inclusive</option>
       </select>
-    </div>
+    </label><br>
+    <label>Hotel Image: <input type="file" id="hotelImage"></label><br>
     <button type="submit">Generate Voucher</button>
   </form>
 
-  <div class="voucher" id="flymaxtVoucher" style="display:none;"></div>
-  <div class="voucher" id="agodaVoucher" style="display:none;"></div>
-  <button id="downloadBtn" style="display:none;" onclick="downloadPDF()">Download PDF</button>
+  <div id="voucherOutput" class="voucher" style="display:none;"></div>
+  <button id="downloadBtn" onclick="downloadPDF()" style="display:none;">Download PDF</button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="script.js"></script>

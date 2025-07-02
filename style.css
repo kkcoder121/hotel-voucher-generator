@@ -1,17 +1,18 @@
 
-.voucher {
-  margin-top: 40px;
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
   padding: 20px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 14px;
-  line-height: 1.4;
 }
-.voucher h2, .voucher h3, .voucher h4 { color: #333; }
-.voucher h2 { font-size: 18px; margin-bottom: 10px; }
-.voucher h3 { font-size: 16px; margin-bottom: 8px; }
-.voucher h4 { font-size: 14px; margin-bottom: 6px; }
-.voucher p { margin: 5px 0; }
-.voucher ul { margin: 5px 0; padding-left: 20px; }
-.voucher li { margin-bottom: 3px; }
-hr { border: none; border-top: 1px solid #ccc; margin: 10px 0; }
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.voucher-box {
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #000;
+  margin-top: 20px;
+}
