@@ -1,36 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hotel Voucher - Flymaxt</title>
+  <title>Flymaxt Hotel Voucher</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form id="voucherForm">
-    <h2>Hotel Voucher Generator</h2>
-    <label>Guest Name: <input type="text" id="guestName" required></label><br>
-    <label>Booking ID: <input type="text" id="bookingId" required></label><br>
-    <label>Hotel Name: <input type="text" id="hotelName" required></label><br>
-    <label>Hotel Address: <input type="text" id="hotelAddress" required></label><br>
-    <label>Hotel Contact: <input type="text" id="hotelContact" required></label><br>
-    <label>Hotel Email: <input type="email" id="hotelEmail" required></label><br>
-    <label>Check-In Date: <input type="date" id="checkIn" required></label><br>
-    <label>Check-Out Date: <input type="date" id="checkOut" required></label><br>
-    <label>Room Type: <input type="text" id="roomType" required></label><br>
-    <label>Occupancy: <input type="text" id="occupancy" required></label><br>
-    <label>Meal Plan:
-      <select id="mealPlan">
-        <option value="Room Only">Room Only</option>
-        <option value="Breakfast Included">Breakfast Included</option>
-        <option value="Half Board">Half Board</option>
-        <option value="Full Board">Full Board</option>
-        <option value="All Inclusive">All Inclusive</option>
-      </select>
-    </label><br>
-    <label>Hotel Image: <input type="file" id="hotelImage"></label><br>
-    <button type="submit">Generate Voucher</button>
-  </form>
+  <div class="form-container">
+    <form id="voucherForm">
+      <h2>Fill Voucher Details</h2>
+      <label>Guest Name: <input type="text" id="guestName" required></label>
+      <label>Booking ID: <input type="text" id="bookingId" required></label>
+      <label>Hotel Name: <input type="text" id="hotelName" required></label>
+      <label>Hotel Address: <input type="text" id="hotelAddress" required></label>
+      <label>Hotel Contact: <input type="text" id="hotelContact" required></label>
+      <label>Hotel Email: <input type="email" id="hotelEmail" required></label>
+      <label>Room Type: <input type="text" id="roomType" required></label>
+      <label>Occupancy: <input type="text" id="occupancy" required></label>
+      <label>Meal Plan:
+        <select id="mealPlan" required>
+          <option value="Room Only">Room Only</option>
+          <option value="Breakfast Only">Breakfast Only</option>
+          <option value="MAP">MAP</option>
+          <option value="CP">CP</option>
+          <option value="AP">AP</option>
+        </select>
+      </label>
+      <label>Check-In Date: <input type="date" id="checkIn" required></label>
+      <label>Check-Out Date: <input type="date" id="checkOut" required></label>
+      <label>Upload Hotel Image: <input type="file" id="hotelImage"></label>
+      <button type="submit">Generate Voucher</button>
+    </form>
+  </div>
 
   <div id="voucherOutput" class="voucher" style="display:none;"></div>
   <button id="downloadBtn" onclick="downloadPDF()" style="display:none;">Download PDF</button>

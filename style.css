@@ -1,18 +1,35 @@
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f0f0;
   padding: 20px;
 }
-form {
+.form-container {
+  max-width: 600px;
+  margin: auto;
   background: #fff;
   padding: 20px;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-.voucher-box {
-  background: #fff;
-  padding: 20px;
-  border: 2px solid #000;
-  margin-top: 20px;
+form label {
+  display: block;
+  margin: 10px 0;
+}
+form input, form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+}
+.voucher {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border: 2px solid black;
 }
