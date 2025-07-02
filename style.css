@@ -1,48 +1,17 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  padding: 20px;
-}
-.container {
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  max-width: 850px;
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-h1 {
-  text-align: center;
-}
-.form-row {
-  margin-bottom: 15px;
-}
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-input, select {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-}
-button {
-  width: 100%;
-  padding: 10px;
-  background: #007BFF;
-  color: white;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-}
-button:hover {
-  background: #0056b3;
-}
+
 .voucher {
   margin-top: 40px;
   padding: 20px;
   border: 1px solid #ccc;
   background: #fff;
+  font-size: 14px;
+  line-height: 1.4;
 }
+.voucher h2, .voucher h3, .voucher h4 { color: #333; }
+.voucher h2 { font-size: 18px; margin-bottom: 10px; }
+.voucher h3 { font-size: 16px; margin-bottom: 8px; }
+.voucher h4 { font-size: 14px; margin-bottom: 6px; }
+.voucher p { margin: 5px 0; }
+.voucher ul { margin: 5px 0; padding-left: 20px; }
+.voucher li { margin-bottom: 3px; }
+hr { border: none; border-top: 1px solid #ccc; margin: 10px 0; }
