@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Flymaxt Hotel Voucher</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Booking Confirmation</title>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="form-container">
-    <form id="voucherForm">
-      <h2>Fill Voucher Details</h2>
-      <label>Guest Name: <input type="text" id="guestName" required></label>
-      <label>Booking ID: <input type="text" id="bookingId" required></label>
-      <label>Hotel Name: <input type="text" id="hotelName" required></label>
-      <label>Hotel Address: <input type="text" id="hotelAddress" required></label>
-      <label>Hotel Contact: <input type="text" id="hotelContact" required></label>
-      <label>Hotel Email: <input type="email" id="hotelEmail" required></label>
-      <label>Room Type: <input type="text" id="roomType" required></label>
-      <label>Occupancy: <input type="text" id="occupancy" required></label>
-      <label>Meal Plan:
-        <select id="mealPlan" required>
-          <option value="Room Only">Room Only</option>
-          <option value="Breakfast Only">Breakfast Only</option>
-          <option value="MAP">MAP</option>
-          <option value="CP">CP</option>
-          <option value="AP">AP</option>
-        </select>
-      </label>
-      <label>Check-In Date: <input type="date" id="checkIn" required></label>
-      <label>Check-Out Date: <input type="date" id="checkOut" required></label>
-      <label>Upload Hotel Image: <input type="file" id="hotelImage"></label>
-      <button type="submit">Generate Voucher</button>
-    </form>
+  <div class="voucher">
+    <h1>Booking Confirmed</h1>
+    <div class="section">
+      <h2>Guest Details</h2>
+      <p><strong>Name:</strong> Ashish Sharma + 1</p>
+      <p><strong>Room Type:</strong> Superior Twin</p>
+      <p><strong>Meal Plan:</strong> Breakfast</p>
+    </div>
+    <div class="section">
+      <h2>Stay Details</h2>
+      <p><strong>Check-in:</strong> 02:00 PM, Sun, 13 Jul 2025</p>
+      <p><strong>Check-out:</strong> 11:00 AM, Mon, 14 Jul 2025</p>
+    </div>
+    <div class="section">
+      <h2>Hotel Info</h2>
+      <p><strong>Name:</strong> Bloom Hotel - Karol Bagh</p>
+      <p><strong>Address:</strong> Metro Pillar No: 98, 17A, 99, Gurudwara Rd, Karol Bagh, New Delhi, Delhi 110005</p>
+      <p><strong>Contact:</strong> 01146413759</p>
+    </div>
+    <div class="section">
+      <h2>Payment</h2>
+      <p><strong>Total Amount Paid:</strong> ₹5090</p>
+    </div>
   </div>
-
-  <div id="voucherOutput" class="voucher" style="display:none;"></div>
-  <button id="downloadBtn" onclick="downloadPDF()" style="display:none;">Download PDF</button>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
