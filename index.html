@@ -1,50 +1,46 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hotel Voucher</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Voucher Generator</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <form id="voucherForm">
-            <h2>Fill Details</h2>
-            <input type="text" id="guestName" placeholder="Guest Name">
-            <input type="text" id="bookingId" placeholder="Booking ID">
-            <input type="text" id="bookingRef" placeholder="Booking Reference No">
-            <input type="text" id="hotelName" placeholder="Hotel Name">
-            <textarea id="address" placeholder="Address"></textarea>
-            <input type="date" id="checkIn">
-            <input type="date" id="checkOut">
-            <input type="text" id="rooms" placeholder="Rooms">
-            <input type="text" id="adults" placeholder="Adults">
-            <input type="text" id="children" placeholder="Children">
-            <input type="text" id="roomType" placeholder="Room Type">
-            <input type="text" id="benefits" placeholder="Benefits">
-            <button type="button" onclick="generateVoucher()">Generate</button>
-        </form>
-        <div class="voucher">
-            <h1>Flymaxt Holidays</h1>
-            <h3>Hotel Booking Confirmation Voucher</h3>
-            <hr>
-            <div id="voucherContent">
-                <div class="section"><strong>Booking ID:</strong> <span id="vBookingId"></span></div>
-                <div class="section"><strong>Booking Ref:</strong> <span id="vBookingRef"></span></div>
-                <div class="section"><strong>Guest Name:</strong> <span id="vGuestName"></span></div>
-                <div class="section"><strong>Hotel Name:</strong> <span id="vHotelName"></span></div>
-                <div class="section"><strong>Address:</strong> <span id="vAddress"></span></div>
-                <div class="section"><strong>Check-in:</strong> <span id="vCheckIn"></span></div>
-                <div class="section"><strong>Check-out:</strong> <span id="vCheckOut"></span></div>
-                <div class="section"><strong>Room Type:</strong> <span id="vRoomType"></span></div>
-                <div class="section"><strong>Rooms:</strong> <span id="vRooms"></span></div>
-                <div class="section"><strong>Adults:</strong> <span id="vAdults"></span></div>
-                <div class="section"><strong>Children:</strong> <span id="vChildren"></span></div>
-                <div class="section"><strong>Benefits:</strong> <span id="vBenefits"></span></div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="form-section">
+      <h2>Fill Details</h2>
+      <input type="text" id="guestName" placeholder="Guest Name" />
+      <input type="text" id="bookingId" placeholder="Booking ID" />
+      <input type="text" id="referenceNo" placeholder="Booking Reference No" />
+      <input type="text" id="hotelName" placeholder="Hotel Name" />
+      <textarea id="address" placeholder="Address"></textarea>
+      <input type="date" id="checkinDate" />
+      <input type="date" id="checkoutDate" />
+      <input type="number" id="rooms" placeholder="Rooms" />
+      <input type="number" id="adults" placeholder="Adults" />
+      <input type="number" id="children" placeholder="Children" />
+      <input type="text" id="roomType" placeholder="Room Type" />
+      <input type="text" id="benefits" placeholder="Benefits" />
+      <button onclick="generateVoucher()">Generate</button>
     </div>
-    <script src="script.js"></script>
+    <div class="voucher-section">
+      <h2>Hotel Voucher</h2>
+      <hr />
+      <p><strong>Booking ID:</strong> <span id="vBookingId"></span></p>
+      <p><strong>Booking Ref:</strong> <span id="vReferenceNo"></span></p>
+      <p><strong>Guest:</strong> <span id="vGuestName"></span></p>
+      <p><strong>Hotel:</strong> <span id="vHotelName"></span></p>
+      <p><strong>Address:</strong> <span id="vAddress"></span></p>
+      <p><strong>Check-in:</strong> <span id="vCheckinDate"></span> <strong>Check-out:</strong> <span id="vCheckoutDate"></span></p>
+      <p><strong>Rooms:</strong> <span id="vRooms"></span> |
+         <strong>Adults:</strong> <span id="vAdults"></span> |
+         <strong>Children:</strong> <span id="vChildren"></span></p>
+      <p><strong>Room Type:</strong> <span id="vRoomType"></span></p>
+      <p><strong>Benefits:</strong> <span id="vBenefits"></span></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
